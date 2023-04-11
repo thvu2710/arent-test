@@ -1,3 +1,11 @@
+import Header from 'components/Header'
+import MainBanner from 'components/MainBanner'
+
 export default function Home() {
-  return <div className='jps-text'>自分の記録</div>
+  return (
+    <>
+      <Header />
+      <MainBanner />
+    </>
+  )
 }

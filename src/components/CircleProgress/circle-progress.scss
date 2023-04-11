@@ -1,0 +1,123 @@
+/* configuration */
+$primary-color: 'transpanrent';
+$secondary-color: #fff;
+$fill-color: transparent;
+$diameter: 182px;
+$border-width: 2px;
+$font-size: 25px;
+$alt-font-size: 18px;
+$duration: .2s;
+$font-weight: 400;
+$shadow-color: #FC7400;
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+
+  .circle {
+    margin: 20px;
+  }
+}
+
+/* mixin */
+@mixin circle($color) {
+  width: $diameter;
+  height: $diameter;
+  border: $border-width solid $color;
+  background: transparent;
+  border-radius: 100%;
+  transition: width $duration ease-out, height $duration ease-out, border-width $duration ease-out;
+}
+
+/* placeholder */
+%fill-up-styles {
+  .percentage-bar:after {
+    position: absolute;
+    content: '';
+    clip-path: inset(0 0 0 50%);
+    transform: rotate(0deg);
+
+    @include circle($secondary-color);
+    box-shadow: 0px 0px 6px $shadow-color;
+  }
+}
+
+%clip-styles {
+  .percentage-bar {
+    clip-path: none;
+  }
+}
+
+/* percentage circle style */
+.circle {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .data {
+    position: absolute;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    // width: ($diameter + (2 * $border-width));
+    // height: ($diameter + (2 * $border-width));
+    text-align: center;
+    color: $secondary-color;
+    line-height: ($diameter + (2 * $border-width));
+    font-size: $font-size;
+    transition: font-size $duration ease-out;
+    font-weight: $font-weight;
+
+    .date {
+      margin-top: 3px;
+      font-size: $alt-font-size;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $fill-color;
+
+    @include circle($primary-color);
+  }
+
+  .percentage-bar {
+    width: $diameter + (2 * $border-width);
+    height: $diameter + (2 * $border-width);
+    position: absolute;
+    clip-path: inset(0 0 0 50%);
+
+    &:before {
+      position: absolute;
+      content: '';
+      clip-path: inset(0 50% 0 0);
+      transform: rotate(0deg);
+
+      @include circle($secondary-color);
+    }
+  }
+
+  // percentage loop deg
+  @for $i from 1 through 100 {
+    &.percentage-#{$i} {
+      .percentage-bar:before {
+        transform: rotate(360deg / (100 / $i));
+      }
+    }
+  }
+
+  @for $i from 51 through 100 {
+    &.percentage-#{$i} {
+      @extend %fill-up-styles
+    }
+
+    &.percentage-#{$i} {
+      @extend %clip-styles
+    }
+  }
+}
