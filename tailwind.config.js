@@ -14,7 +14,11 @@ module.exports = {
         yellow: '#FFCC21',
         orange: '#FF963C',
         'dark-organge': '#EA6C00',
-        'light-green': '#8FE9D0'
+        'light-green': '#8FE9D0',
+
+      },
+      lineHeight: {
+        defaultTextLH: '18px',
       }
     }
   },

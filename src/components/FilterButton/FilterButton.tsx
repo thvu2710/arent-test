@@ -8,7 +8,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({ ...props }) => {
   const { title, icon } = props
 
   return (
-    <div className='filter-wrapper flex items-center justify-center'>
+    <div className='filter-wrapper flex cursor-pointer items-center justify-center'>
       <div className='button flex flex-col items-center justify-center'>
         <img src={icon === 'knife' ? knife : cup} alt='note' width={56} height={56} />
         <div>{title}</div>

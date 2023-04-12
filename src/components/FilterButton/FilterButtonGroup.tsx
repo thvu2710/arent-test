@@ -8,7 +8,7 @@ const FilterButtonGroup: any = ({ ...props }) => {
   return (
     <div className='mt-[25px] flex items-center justify-center gap-[84px]'>
       {list.map((item: FilterButtonProps) => (
-        <FilterButton {...item}></FilterButton>
+        <FilterButton key={item.id} {...item}></FilterButton>
       ))}
     </div>
   )

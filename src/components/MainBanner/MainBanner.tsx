@@ -62,11 +62,11 @@ export default function MainBanner() {
     ]
   }
   return (
-    <div className='container mx-auto flex flex-row justify-center bg-[#2E2E2E]'>
-      <div className='left-banner w-[40%]'>
+    <div className='flex flex-row justify-center bg-[#2E2E2E]'>
+      <div className='left-banner w-[45%]'>
         <CircleProgress percentage={75} date='05/21'></CircleProgress>
       </div>
-      <div className='w-[60%]'>
+      <div className='w-[55%]'>
         <ChartWrapper {...dataChart} />
       </div>
     </div>
