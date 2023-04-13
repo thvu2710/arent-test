@@ -1,5 +1,6 @@
 import MainLayout from 'layouts/MainLayout'
 import Home from 'pages/Home'
+import MyRecord from 'pages/MyRecord'
 import NotFound from 'pages/NotFound'
 import { useEffect } from 'react'
 import { useRoutes, useLocation, useSearchParams } from 'react-router-dom'
@@ -9,6 +10,10 @@ function App() {
     {
       path: '/',
       element: <Home />
+    },
+    {
+      path: '/my-record',
+      element: <MyRecord />
     },
     {
       path: '*',

@@ -4,21 +4,24 @@ import info from '../../assets/images/info.svg'
 import challenger from '../../assets/images/challenger.svg'
 import menu from '../../assets/images/menu.svg'
 import './header.scss'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
     <div className='flex items-center justify-center bg-titanBlack'>
       <div className='header container  mx-auto flex w-full px-2 lg:max-w-[960px]'>
         <nav className='flex w-full items-center justify-between'>
-          <div>
+          <Link to={'/'}>
             <img src={logo} alt='logo' />
-          </div>
+          </Link>
 
           <div className='flex gap-x-7'>
-            <div className='jps-text flex items-center text-normal font-light text-white'>
-              <img src={note} alt='note' />
-              自分の記録
-            </div>
+            <Link to={'/my-record'}>
+              <div className='jps-text flex items-center text-normal font-light text-white'>
+                <img src={note} alt='note' />
+                自分の記録
+              </div>
+            </Link>
 
             <div className='jps-text flex items-center text-normal font-light text-white'>
               <img src={info} alt='info' />
