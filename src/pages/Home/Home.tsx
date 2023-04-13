@@ -47,66 +47,59 @@ export default function Home() {
   const menuItem = [
     {
       id: 1,
-      image: 'morning2.jpg',
+      image: 'morning.png',
       date: '05.21',
       title: 'Morning',
       type: 'Morning'
     },
     {
       id: 2,
-      image: 'lunch1.jpg',
+      image: 'lunch1.png',
       date: '05.21',
       title: 'Lunch',
       type: 'Lunch'
     },
     {
       id: 3,
-      image: 'dinner1.jpg',
+      image: 'dinner1.png',
       date: '05.21',
       title: 'Dinner',
       type: 'Dinner'
     },
     {
       id: 4,
-      image: 'snack1.jpg',
+      image: 'snack1.png',
       date: '05.21',
       title: 'Snack',
       type: 'Snack'
     },
     {
       id: 5,
-      image: 'morning1.jpg',
+      image: 'morning.png',
       date: '05.20',
       title: 'Morning',
       type: 'Morning'
     },
     {
       id: 6,
-      image: 'lunch2.jpg',
+      image: 'lunch2.png',
       date: '05.20',
       title: 'Lunch',
       type: 'Lunch'
     },
     {
       id: 7,
-      image: 'dinner2.jpg',
+      image: 'dinner2.png',
       date: '05.20',
       title: 'Dinner',
       type: 'Dinner'
     },
     {
       id: 8,
-      image: 'snack2.jpg',
+      image: 'snack2.png',
       date: '05.21',
       title: 'Snack',
       type: 'Snack'
-    },
-    {
-      id: 9,
-      image: 'lunch3.jpg',
-      date: '05.21',
-      title: 'Lunch',
-      type: 'Lunch'
     }
   ]
   const handleClick = () => {}

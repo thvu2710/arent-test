@@ -8,7 +8,7 @@ import './header.scss'
 export default function Header() {
   return (
     <div className='flex items-center justify-center bg-titanBlack'>
-      <div className='header container  mx-auto flex w-full px-2'>
+      <div className='header container  mx-auto flex w-full px-2 lg:max-w-[960px]'>
         <nav className='flex w-full items-center justify-between'>
           <div>
             <img src={logo} alt='logo' />

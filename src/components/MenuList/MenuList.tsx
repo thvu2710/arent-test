@@ -6,7 +6,7 @@ const MenuList: any = ({ ...props }) => {
   const { list } = props
   return (
     <div className='flex justify-center'>
-      <div className='container mt-[25px] mb-[25px] grid grid-cols-4 gap-[8px] max-w-[960px]'>
+      <div className='container mt-[25px] mb-[25px] grid gap-[8px] sm:grid-cols-2 md:grid-cols-3 lg:max-w-[960px] lg:grid-cols-4'>
         {list.map((item: MenuItemProps) => (
           <MenuItem key={item.id} {...item}></MenuItem>
         ))}
