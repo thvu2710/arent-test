@@ -14,12 +14,21 @@ module.exports = {
         yellow: '#FFCC21',
         orange: '#FF963C',
         'dark-organge': '#EA6C00',
-        'light-green': '#8FE9D0',
-
+        'light-green': '#8FE9D0'
       },
       lineHeight: {
-        defaultTextLH: '18px',
+        defaultTextLH: '18px'
       }
+    },
+    screens: {
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: '1280px'
+      // => @media (min-width: 1280px) { ... }
     }
   },
   plugins: []

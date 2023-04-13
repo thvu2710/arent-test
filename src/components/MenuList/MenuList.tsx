@@ -5,8 +5,8 @@ import './menu-list.scss'
 const MenuList: any = ({ ...props }) => {
   const { list } = props
   return (
-    <div className='flex  justify-center'>
-      <div className='menu-item-wrapper container mt-[25px] mb-[25px] grid max-w-[960px] grid-cols-4 gap-[8px]'>
+    <div className='flex justify-center'>
+      <div className='container mt-[25px] mb-[25px] grid grid-cols-4 gap-[8px] max-w-[960px]'>
         {list.map((item: MenuItemProps) => (
           <MenuItem key={item.id} {...item}></MenuItem>
         ))}
