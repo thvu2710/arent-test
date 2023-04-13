@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   return (
     <div className='flex items-center justify-center bg-titanBlack'>
-      <div className='header container  mx-auto flex w-full px-2 lg:max-w-[960px]'>
+      <div className='container  mx-auto flex w-full lg:max-w-[1024px]'>
         <nav className='flex w-full items-center justify-between'>
           <Link to={'/'}>
             <img src={logo} alt='logo' />

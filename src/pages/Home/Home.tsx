@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Button from 'components/Button'
-import FilterButtonGroup from 'components/FilterButton/FilterButtonGroup'
+import FilterButtonGroup from '../../components/FilterButton'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import MainBanner from 'components/MainBanner'
