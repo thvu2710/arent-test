@@ -5,7 +5,7 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import MainBanner from 'components/MainBanner'
 import MenuList from 'components/MenuList/MenuList'
-import backtoTop from '../../assets/images/scroll-top.svg'
+import BackToTop from 'components/BackToTop'
 import useScroll from '../../hooks/useScroll'
 
 export default function Home() {
@@ -104,13 +104,15 @@ export default function Home() {
   ]
   const handleClick = () => {}
   const buttonProps = {
-    background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
+    handleClick: handleClick,
     text: '記録をもっと見る',
-    color: '#fff',
-    padding: '15px 0',
-    minWidth: 296,
-    maxWidth: 296,
-    handleClick: handleClick
+    style: {
+      background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
+      color: '#fff',
+      padding: '15px 0',
+      minWidth: 296,
+      maxWidth: 296
+    }
   }
   return (
     <>
@@ -124,22 +126,7 @@ export default function Home() {
       </div>
 
       <Footer />
-
-      {isShowBackToTopBtn && (
-        <img
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })
-          }}
-          className='fixed top-[50%] right-[10%]'
-          src={backtoTop}
-          alt='top'
-          width={48}
-          height={48}
-        />
-      )}
+      <BackToTop isShow={isShowBackToTopBtn}></BackToTop>
     </>
   )
 }
