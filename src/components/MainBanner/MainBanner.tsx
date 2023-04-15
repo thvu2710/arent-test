@@ -67,7 +67,7 @@ export default function MainBanner() {
         <CircleProgress percentage={75} date='05/21'></CircleProgress>
       </div>
       <div className='w-[55%]'>
-        <ChartWrapper {...dataChart} />
+        <ChartWrapper {...dataChart} style={{ height: 316 }} />
       </div>
     </div>
   )

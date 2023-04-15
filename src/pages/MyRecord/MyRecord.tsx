@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import BackToTop from 'components/BackToTop'
 import useScroll from '../../hooks/useScroll'
 import Header from 'components/Header'
@@ -6,12 +6,38 @@ import Footer from 'components/Footer'
 import MyRecordCategoryList from '../../components/MyRecordCategory'
 import ChartWrapper from 'components/Chart'
 import MyExerciseList from 'components/MyExercise/MyExerciseList'
+import MyDiaryList from 'components/MyDiary/MyDiaryList'
+import Button from 'components/Button'
 
 export default function MyRecord() {
+  const bodyRecordRef = useRef<HTMLInputElement>(null)
+  const exerciseRef = useRef<HTMLInputElement>(null)
+  const diaryRef = useRef<HTMLInputElement>(null)
+
   const scroll = useScroll()
   const [isShowBackToTopBtn, setIsShowBackToTopBtn] = useState(false)
 
-  const [selectedCategory, setSelectedCategory] = useState('record')
+  const [selectedCategory, setSelectedCategory] = useState('')
+
+  useEffect(() => {
+    if (selectedCategory) {
+      let moveRef = null
+
+      switch (selectedCategory) {
+        case 'record':
+          moveRef = bodyRecordRef
+          break
+        case 'exercise':
+          moveRef = exerciseRef
+          break
+        case 'diary':
+          moveRef = diaryRef
+          break
+      }
+
+      moveRef?.current?.scrollIntoView()
+    }
+  }, [selectedCategory])
 
   useEffect(() => {
     if (scroll > 50) {
@@ -193,27 +219,117 @@ export default function MyRecord() {
     ]
   }
 
+  const diaryData = [
+    {
+      id: 1,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 2,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 3,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 4,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 5,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 6,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 7,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    },
+    {
+      id: 8,
+      title: '私の日記の記録が一部表示されます。',
+      content:
+        'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+      date: '2021.05.21',
+      time: '23:25'
+    }
+  ]
+
   const handleChange = (category: string) => {
     setSelectedCategory(category)
+  }
+  const handleClickViewMore = () => {}
+
+  const buttonProps = {
+    handleClick: handleClickViewMore,
+    text: '記録をもっと見る',
+    style: {
+      background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
+      color: '#fff',
+      padding: '15px 0',
+      minWidth: 296,
+      maxWidth: 296
+    }
   }
 
   return (
     <>
       <Header />
 
-      <MyRecordCategoryList
-        list={categoryList}
-        selected={selectedCategory}
-        handleChange={handleChange}
-      ></MyRecordCategoryList>
+      <div>
+        <MyRecordCategoryList
+          list={categoryList}
+          selected={selectedCategory}
+          handleChange={handleChange}
+        ></MyRecordCategoryList>
+      </div>
 
-      {selectedCategory === 'record' && (
-        <div className='flex justify-center'>
-          <ChartWrapper {...dataChart} style={{ width: 1024, height: 304 }} />
-        </div>
-      )}
+      <div className='flex justify-center' ref={bodyRecordRef}>
+        <ChartWrapper {...dataChart} style={{ width: 1024, height: 304 }} />
+      </div>
 
-      {selectedCategory === 'exercise' && <MyExerciseList {...exerciseData}></MyExerciseList>}
+      <div ref={exerciseRef}>
+        <MyExerciseList {...exerciseData}></MyExerciseList>
+      </div>
+
+      <div ref={diaryRef}>
+        <MyDiaryList list={diaryData}></MyDiaryList>
+      </div>
+
+      <div className='mb-[64px] flex justify-center'>
+        <Button {...buttonProps} />
+      </div>
 
       <Footer />
 

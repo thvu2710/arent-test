@@ -102,9 +102,9 @@ export default function Home() {
       type: 'Snack'
     }
   ]
-  const handleClick = () => {}
+  const handleClickViewMore = () => {}
   const buttonProps = {
-    handleClick: handleClick,
+    handleClick: handleClickViewMore,
     text: '記録をもっと見る',
     style: {
       background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
