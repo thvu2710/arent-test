@@ -19,6 +19,9 @@
         .sidebar-item {
             border-bottom: 1px solid #8b8b8c;
             padding: 23px 32px;
+            &:hover {
+                color: #FF963C;
+            }
         }
     }
 
