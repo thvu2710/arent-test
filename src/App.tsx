@@ -1,6 +1,7 @@
 import MainLayout from 'layouts/MainLayout'
 import Home from 'pages/Home'
 import MyRecord from 'pages/MyRecord'
+import MyColumn from 'pages/MyColumn'
 import NotFound from 'pages/NotFound'
 import { useEffect } from 'react'
 import { useRoutes, useLocation, useSearchParams } from 'react-router-dom'
@@ -14,6 +15,10 @@ function App() {
     {
       path: '/my-record',
       element: <MyRecord />
+    },
+    {
+      path: '/my-column',
+      element: <MyColumn />
     },
     {
       path: '*',

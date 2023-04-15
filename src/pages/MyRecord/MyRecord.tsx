@@ -293,7 +293,7 @@ export default function MyRecord() {
 
   const buttonProps = {
     handleClick: handleClickViewMore,
-    text: '記録をもっと見る',
+    text: '自分の日記をもっと見る',
     style: {
       background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
       color: '#fff',
@@ -307,13 +307,11 @@ export default function MyRecord() {
     <>
       <Header />
 
-      <div>
-        <MyRecordCategoryList
-          list={categoryList}
-          selected={selectedCategory}
-          handleChange={handleChange}
-        ></MyRecordCategoryList>
-      </div>
+      <MyRecordCategoryList
+        list={categoryList}
+        selected={selectedCategory}
+        handleChange={handleChange}
+      ></MyRecordCategoryList>
 
       <div className='flex justify-center' ref={bodyRecordRef}>
         <ChartWrapper {...dataChart} style={{ width: 1024, height: 304 }} />
