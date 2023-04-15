@@ -5,6 +5,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import MyRecordCategoryList from '../../components/MyRecordCategory'
 import ChartWrapper from 'components/Chart'
+import MyExerciseList from 'components/MyExercise/MyExerciseList'
 
 export default function MyRecord() {
   const scroll = useScroll()
@@ -113,9 +114,87 @@ export default function MyRecord() {
     }
   }
 
+  const exerciseData = {
+    title: 'MY EXERCISE',
+    time: '2021.05.21',
+    list: [
+      {
+        id: 1,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 2,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 3,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 4,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 5,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 6,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 7,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 8,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 9,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 10,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 11,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      },
+      {
+        id: 12,
+        title: '家事全般（立位・軽い）',
+        kcal: 26,
+        time: 10
+      }
+    ]
+  }
+
   const handleChange = (category: string) => {
     setSelectedCategory(category)
-    debugger
   }
 
   return (
@@ -133,6 +212,8 @@ export default function MyRecord() {
           <ChartWrapper {...dataChart} style={{ width: 1024, height: 304 }} />
         </div>
       )}
+
+      {selectedCategory === 'exercise' && <MyExerciseList {...exerciseData}></MyExerciseList>}
 
       <Footer />
 

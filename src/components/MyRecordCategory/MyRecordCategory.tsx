@@ -4,7 +4,9 @@ const MyRecordCategory: React.FC<MyRecordCategoryPropsType> = ({ ...props }) => 
   const { type, title, description, handleChange, selected } = props
   return (
     <div
-      className={`relative flex h-[288px] w-[288px] items-center justify-center ${selected === type && 'bg-yellow'} `}
+      className={`relative flex h-[288px] w-[288px] cursor-pointer items-center justify-center ${
+        selected === type && 'bg-yellow'
+      } `}
       onClick={() => handleChange(type)}
     >
       <div className='z-20 flex flex-col items-center gap-[11px] px-[10px] py-[7px] text-[15px] font-normal leading-defaultTextLH text-white'>
