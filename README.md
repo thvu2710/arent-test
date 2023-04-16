@@ -1,6 +1,12 @@
-# ARENT Test app using Create React APP
+# ARENT Test Readme
+
+Project using [Create Ceact App](https://create-react-app.dev/) with Typescript to build the structure
 
 ## Available Scripts
+
+To install the related library run:
+
+### npm install | yarn install
 
 In the project directory, you can run:
 
@@ -22,4 +28,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## External module/lib
+- [Tailwindcss](https://tailwindcss.com/)
+- [Apexcharts](https://apexcharts.com/)
+
 ## File structure
+- public: public asset images
+- src
+- --assets: asset images
+- --components: contain all components
+- --global: additional global config scss and script
+- --hooks: contain hooks
+- --layouts: contain base layout
+- --pages: contain code base for every page
+- tailwind.config.js: config environment for tailwindcss
+
