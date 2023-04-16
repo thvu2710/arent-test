@@ -1,10 +1,11 @@
-import MenuItem from './MenuItem'
-import { MenuItemProps } from './type'
+import RecommendItem from './ReccommendItem'
+import { RecommendItemProps } from './type'
 import Button from 'components/Button'
-import './menu-list.scss'
+import './recommend-list.scss'
 
-const MenuList: any = ({ ...props }) => {
+const RecommendList: any = ({ ...props }) => {
   const { list, handleGetMoreList } = props
+
   const buttonProps = {
     handleClick: handleGetMoreList,
     text: '記録をもっと見る',
@@ -19,10 +20,12 @@ const MenuList: any = ({ ...props }) => {
   return (
     <>
       <div className='flex justify-center'>
-        <div className='container grid gap-[8px] sm:grid-cols-2 md:grid-cols-3 lg:max-w-[960px] lg:grid-cols-4'>
-          {list.map((item: MenuItemProps) => (
-            <MenuItem key={item.id} {...item}></MenuItem>
-          ))}
+        <div>
+          <div className='container grid gap-x-[8px] gap-y-[18px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+            {list.map((item: RecommendItemProps) => (
+              <RecommendItem key={item.id} {...item}></RecommendItem>
+            ))}
+          </div>
         </div>
       </div>
       <div className='mt-[26px] mb-[64px] flex justify-center'>
@@ -32,4 +35,4 @@ const MenuList: any = ({ ...props }) => {
   )
 }
 
-export default MenuList
+export default RecommendList

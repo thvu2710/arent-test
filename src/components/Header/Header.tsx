@@ -53,27 +53,27 @@ export default function Header() {
                 <div className='sidebar-body'>
                   <ul>
                     <Link to={''}>
-                      <li className='sidebar-item'>自分の記録</li>
+                      <li className='jps-text sidebar-item'>自分の記録</li>
                     </Link>
 
                     <Link to={''}>
-                      <li className='sidebar-item'>体重グラフ</li>
+                      <li className='jps-text sidebar-item'>体重グラフ</li>
                     </Link>
 
                     <Link to={''}>
-                      <li className='sidebar-item'>目標</li>
+                      <li className='jps-text sidebar-item'>目標</li>
                     </Link>
 
                     <Link to={''}>
-                      <li className='sidebar-item'>選択中のコース</li>
+                      <li className='jps-text sidebar-item'>選択中のコース</li>
                     </Link>
 
                     <Link to={'/my-column'}>
-                      <li className='sidebar-item'>コラム一覧</li>
+                      <li className='jps-text sidebar-item'>コラム一覧</li>
                     </Link>
 
                     <Link to={''}>
-                      <li className='sidebar-item'>設定</li>
+                      <li className='jps-text sidebar-item'>設定</li>
                     </Link>
                   </ul>
                 </div>

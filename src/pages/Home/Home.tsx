@@ -102,28 +102,15 @@ export default function Home() {
       type: 'Snack'
     }
   ]
-  const handleClickViewMore = () => {}
-  const buttonProps = {
-    handleClick: handleClickViewMore,
-    text: '記録をもっと見る',
-    style: {
-      background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
-      color: '#fff',
-      padding: '15px 0',
-      minWidth: 296,
-      maxWidth: 296
-    }
-  }
+
+  const handleGetMoreList = () => {}
+
   return (
     <>
       <Header />
       <MainBanner />
       <FilterButtonGroup list={listFilterItem} />
-      <MenuList list={menuItem} />
-
-      <div className='mb-[64px] flex justify-center'>
-        <Button {...buttonProps} />
-      </div>
+      <MenuList list={menuItem} handleGetMoreList={handleGetMoreList} />
 
       <Footer />
       <BackToTop isShow={isShowBackToTopBtn}></BackToTop>
