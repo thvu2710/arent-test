@@ -53,7 +53,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'DIET',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 2,
@@ -61,7 +61,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'HEALTH',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'HEALTH',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 4,
@@ -77,7 +77,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'DIET',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 5,
@@ -85,7 +85,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'BEAUTY',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 6,
@@ -93,7 +93,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'BEAUTY',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 7,
@@ -101,7 +101,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'DIET',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     },
     {
       id: 8,
@@ -109,7 +109,7 @@ export default function MyColumn() {
       date: '2021.05.17   23:25',
       content: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…',
       type: 'COLUMN',
-      tags: ['魚料理', '#和食', 'DHA']
+      tags: ['魚料理', '和食', 'DHA']
     }
   ]
 
