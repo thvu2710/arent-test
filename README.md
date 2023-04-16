@@ -44,4 +44,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - --App.tsx: contain route config
 - tailwind.config.js: config environment for tailwindcss
 
-
+### Github
+All source code also located on github repo: https://github.com/thvu2710/arent-test
