@@ -41,5 +41,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - --hooks: contain hooks
 - --layouts: contain base layout
 - --pages: contain code base for every page
+- --App.tsx: contain route config
 - tailwind.config.js: config environment for tailwindcss
+
 
