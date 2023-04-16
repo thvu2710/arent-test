@@ -1,8 +1,8 @@
 import FilterButton from './FilterButton'
-import { FilterButtonProps } from './type'
+import { FilterButtonProps, FilterButtonGroupProps } from './type'
 import './filter-button.scss'
 
-const FilterButtonGroup: any = ({ ...props }) => {
+const FilterButtonGroup: React.FC<FilterButtonGroupProps> = ({ ...props }) => {
   const { list } = props
 
   return (

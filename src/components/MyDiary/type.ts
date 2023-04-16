@@ -10,4 +10,5 @@ export interface MyDiaryProps extends DefaultPropsType {
 
 export interface MyDiaryListProps extends DefaultPropsType {
   list: MyDiaryProps[]
+  handleClickViewMore: () => void
 }

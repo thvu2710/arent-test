@@ -115,9 +115,12 @@ export default function MyColumn() {
 
   const handleChange = (category: string) => {
     setSelectedCategory(category)
+    console.log('Select: ', category)
   }
 
-  const handleGetMoreList = () => {}
+  const handleGetMoreList = () => {
+    console.log('Select get more recommended list')
+  }
 
   return (
     <>

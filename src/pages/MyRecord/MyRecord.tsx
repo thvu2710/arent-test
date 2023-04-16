@@ -7,7 +7,6 @@ import MyRecordCategoryList from '../../components/MyRecordCategory'
 import ChartWrapper from 'components/Chart'
 import MyExerciseList from 'components/MyExercise/MyExerciseList'
 import MyDiaryList from 'components/MyDiary/MyDiaryList'
-import Button from 'components/Button'
 
 export default function MyRecord() {
   const bodyRecordRef = useRef<HTMLInputElement>(null)
@@ -289,18 +288,8 @@ export default function MyRecord() {
   const handleChange = (category: string) => {
     setSelectedCategory(category)
   }
-  const handleClickViewMore = () => {}
-
-  const buttonProps = {
-    handleClick: handleClickViewMore,
-    text: '自分の日記をもっと見る',
-    style: {
-      background: 'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
-      color: '#fff',
-      padding: '15px 0',
-      minWidth: 296,
-      maxWidth: 296
-    }
+  const handleClickViewMore = () => {
+    console.log('Select get more Diary')
   }
 
   return (
@@ -322,11 +311,7 @@ export default function MyRecord() {
       </div>
 
       <div ref={diaryRef}>
-        <MyDiaryList list={diaryData}></MyDiaryList>
-      </div>
-
-      <div className='mb-[64px] flex justify-center'>
-        <Button {...buttonProps} />
+        <MyDiaryList list={diaryData} handleClickViewMore={handleClickViewMore}></MyDiaryList>
       </div>
 
       <Footer />

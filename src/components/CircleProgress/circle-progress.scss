@@ -63,8 +63,6 @@ $shadow-color: #FC7400;
     display: block;
     display: flex;
     flex-direction: row;
-    // width: ($diameter + (2 * $border-width));
-    // height: ($diameter + (2 * $border-width));
     text-align: center;
     color: $secondary-color;
     line-height: ($diameter + (2 * $border-width));

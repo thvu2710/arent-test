@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import FilterButtonGroup from '../../components/FilterButton'
+import FilterButtonGroup from 'components/FilterButton'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import MainBanner from 'components/MainBanner'
@@ -23,23 +23,27 @@ export default function Home() {
     {
       id: 1,
       icon: 'knift',
-      title: 'Morning'
+      title: 'Morning',
+      handleSelect: (title: string) => handleFilter(title)
     },
     {
       id: 2,
       icon: 'knift',
-      title: 'Lunch'
+      title: 'Lunch',
+      handleSelect: (title: string) => handleFilter(title)
     },
     {
       id: 3,
 
       icon: 'knift',
-      title: 'Dinner'
+      title: 'Dinner',
+      handleSelect: (title: string) => handleFilter(title)
     },
     {
       id: 4,
       icon: 'cup',
-      title: 'Snack'
+      title: 'Snack',
+      handleSelect: (title: string) => handleFilter(title)
     }
   ]
 
@@ -102,16 +106,26 @@ export default function Home() {
     }
   ]
 
-  const handleGetMoreList = () => {}
+  const handleGetMoreList = () => {
+    console.log('Select get more menu item')
+  }
+
+  const handleFilter = (item: string) => {
+    console.log('Select: ', item)
+  }
 
   return (
     <>
       <Header />
+
       <MainBanner />
+
       <FilterButtonGroup list={listFilterItem} />
+
       <MenuList list={menuItem} handleGetMoreList={handleGetMoreList} />
 
       <Footer />
+
       <BackToTop isShow={isShowBackToTopBtn}></BackToTop>
     </>
   )
